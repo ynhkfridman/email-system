@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: email-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: email-gateway
+  template:
+    metadata:
+      labels:
+        app: email-gateway
+    spec:
+      containers:
+        - name: email-gateway
+          image: yudafrid/email-gateway:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_RABBITMQ_HOST
+              value: rabbitmq
+            - name: SPRING_RABBITMQ_USERNAME
+              value: guest
+            - name: SPRING_RABBITMQ_PASSWORD
+              value: guest
