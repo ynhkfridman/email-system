@@ -1,11 +1,11 @@
-# JAVA_Email_Server
+# JAVA Email Server
 
 This project implements a Bridge Email Server for sending emails via Gmail, Walla, and Yahoo without logging into each vendor separately.
 
-Each employee has three email accounts (one per vendor). The system routes the email to the correct SMTP server based on the sender's address.
+Each employee has email accounts under different domains. The system identifies the appropriate email provider based on the sender's address and sends accordingly.
 
 Features include:  
-- Simple Email Client: To, From, Body 
+- Simple Email Client: To, From, Body  
 - Appending email timestamp and body size to `emails-log.csv`  
 
 Built with Spring Boot, Docker, RabbitMQ, and Kubernetes.  
