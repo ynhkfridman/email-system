@@ -1,4 +1,4 @@
-#JAVA_Email_Server
+# JAVA_Email_Server
 
 This project implements a Bridge Email Server for sending emails via Gmail, Walla, and Yahoo without logging into each vendor separately.
 
